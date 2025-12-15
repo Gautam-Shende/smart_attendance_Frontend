@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/axios";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   const nav = useNavigate();
@@ -44,9 +45,9 @@ const Login = () => {
 
           <p className="mt-3 text-center">
             Don't have an account?{" "}
-            <a href="/register" className="text-primary">
+            <NavLink to="/register" className="text-primary">
               Register
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api/axios";
+import { NavLink } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -53,9 +54,9 @@ const Register = () => {
           </button>
           <p className="mt-3 text-center">
             If You Registres successfully, Then Please LoginFirst!{" "}
-            <a href="/login" className="text-primary">
+            <NavLink to="/login" className="text-primary">
               Login
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>
