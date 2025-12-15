@@ -53,7 +53,7 @@ const Register = () => {
             Register
           </button>
           <p className="mt-3 text-center">
-            If You Registres successfully, Then Please LoginFirst!{" "}
+            If You Registered successfully, Then Please LoginFirst!{" "}
             <NavLink to="/login" className="text-primary">
               Login
             </NavLink>
