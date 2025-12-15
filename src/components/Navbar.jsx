@@ -5,8 +5,11 @@ const Navbar = () => {
   // Check user login status using token
   const isLoggedIn = !!localStorage.getItem("token");
 
-  const logout = () => {
+  const navigate = useNavigate();
+
+const handleLogout = () => {
   localStorage.removeItem("token");
+  alert("Logged out");
   navigate("/login", { replace: true });
 };
 
