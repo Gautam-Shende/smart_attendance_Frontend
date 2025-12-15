@@ -5,11 +5,11 @@ const Navbar = () => {
   // Check user login status using token
   const isLoggedIn = !!localStorage.getItem("token");
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    alert("Logged out");
-    window.location.href = "/login";
-  };
+  const logout = () => {
+  localStorage.removeItem("token");
+  navigate("/login", { replace: true });
+};
+
 
   return (
     <nav className="navbar navbar-dark bg-primary px-4">
