@@ -8,15 +8,12 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const submit = async () => {
-    const res = await api.post(
-      "/api/auth/register",
-      {
-        name,
-        email,
-        branch,
-        password,
-      }
-    );
+    const res = await api.post("/api/auth/register", {
+      name,
+      email,
+      branch,
+      password,
+    });
     alert(res.data.message);
   };
 

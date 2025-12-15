@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   // Check user login status using token
@@ -7,13 +8,11 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-const handleLogout = () => {
-  localStorage.removeItem("token");
-  alert("Logged out");
-  navigate("/login", { replace: true });
-};
-
-
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    alert("Logged out");
+    navigate("/login", { replace: true });
+  };
   return (
     <nav className="navbar navbar-dark bg-primary px-4">
       <Link className="navbar-brand text-white fw-bold" to="/">
